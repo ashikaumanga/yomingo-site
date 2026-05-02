@@ -1,5 +1,239 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YominGo - Learn Japanese Through Real Content & AI Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
-YominGo
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">YominGo</div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how">How It Works</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Learn Japanese Through<br><span class="highlight">Real Content & AI Practice</span></h1>
+            <p>Read authentic articles, build vocabulary with flashcards, and practice writing with AI-powered feedback
+                that actually helps you improve.</p>
+
+            <div class="cta-buttons">
+                <a href="#" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Get it on Google Play" class="store-badge">
+                </a>
+                <div
+                    style="display: flex; flex-direction: column; align-items: center; opacity: 0.6; cursor: not-allowed;">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store" class="store-badge"
+                        style="pointer-events: none; filter: grayscale(100%); margin-bottom: 4px;">
+                    <span style="font-size: 12px; font-weight: 600; color: #546e7a;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>Why Most Vocabulary Apps Don't Work</h2>
+            <div class="problem-cards">
+                <div class="problem-card">
+                    <div class="icon">📚</div>
+                    <h3>No Context</h3>
+                    <p>Learning isolated words from textbook examples doesn't show you how Japanese is actually used.
+                    </p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">🧠</div>
+                    <h3>Poor Retention</h3>
+                    <p>Without spaced repetition, you forget words as fast as you learn them.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">✍️</div>
+                    <h3>No Production Practice</h3>
+                    <p>Recognizing words is easy. Using them correctly in sentences? That's the real challenge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Comprehensive Learning Journey</h2>
+
+            <div class="feature-item">
+                <div class="feature-content">
+                    <h3>📰 Read Real Japanese</h3>
+                    <p>Browse authentic news articles written for native speakers. Tap any word for instant dictionary
+                        lookup with furigana reading guides.</p>
+                    <p>Our advanced <strong>Compound Word Breakdown</strong> technology analyzes complex Japanese terms,
+                        splitting them into easily understandable sub-components.</p>
+                    <p>One tap saves words to your personal deck for practice later. Learn vocabulary in the context
+                        it's actually used.</p>
+                </div>
+                <div class="feature-visual read"
+                    style="padding: 0; overflow: hidden; background: none; box-shadow: none;">
+                    <img src="assets/reader_mockup.png" alt="Article reader with word lookup"
+                        style="width: 100%; height: 100%; object-fit: contain; border-radius: 20px; box-shadow: 0 20px 60px rgba(129, 212, 250, 0.3);">
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-content">
+                    <h3>🔍 Standalone Dictionary & Organization</h3>
+                    <p>Not just a reader—YominGo features a professional-grade standalone Japanese dictionary with
+                        Romaji support and intelligent multi-factor ranking.</p>
+                    <p>Build <strong>User-Created Collections</strong> to neatly organize your vocabulary, and
+                        effortlessly bookmark your favorite articles for future reading.</p>
+                </div>
+                <div class="feature-visual dict"
+                    style="background: linear-gradient(135deg, #4dd0e1 0%, #00acc1 100%); box-shadow: 0 20px 60px rgba(0, 172, 193, 0.3);">
+                    Organize your<br>Vocabulary Journey
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-content">
+                    <h3>🎴 Smart Flashcards</h3>
+                    <p>Powered by the FSRS algorithm (the science behind Anki), cards appear exactly when you're about
+                        to forget them.</p>
+                    <p>Experience <strong>Sense-Aware Flashcards</strong>: reviews and exercises are tied to the
+                        specific contextual meaning you found the word in.</p>
+                    <p>Progressive difficulty: Kanji → Reading → Meaning. Filter by JLPT level (N5-N1) to focus on what
+                        matters for your goals.</p>
+                </div>
+                <div class="feature-visual flashcards">
+                    Screenshot: Flashcard interface<br>with JLPT filtering
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-content">
+                    <h3>🤖 AI Writing Tutor</h3>
+                    <p>The real magic: Write Japanese sentences using your vocabulary, get detailed AI feedback on what
+                        you did right and what to improve.</p>
+                    <p>Not just "correct" or "wrong"—get scored feedback on grammar, word choice, and natural usage.
+                        This is how you actually learn to use words, not just recognize them.</p>
+                </div>
+                <div class="feature-visual ai"
+                    style="padding: 0; overflow: hidden; background: none; box-shadow: none;">
+                    <img src="assets/ai_tutor_mockup.png" alt="AI tutor grading with feedback"
+                        style="width: 100%; height: 100%; object-fit: contain; border-radius: 20px; box-shadow: 0 20px 60px rgba(41, 182, 246, 0.3);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Read & Collect</h3>
+                    <p>Browse articles, tap words you don't know, add them to your deck</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Review Daily</h3>
+                    <p>Flashcards appear based on spaced repetition—review what you're about to forget</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Practice Writing</h3>
+                    <p>Use your vocabulary in sentences, get AI feedback, improve your Japanese</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Track Progress</h3>
+                    <p>Watch your vocabulary grow and retention improve over time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="roadmap" id="roadmap">
+        <div class="container">
+            <h2>What's Now & What's Next</h2>
+            <p class="roadmap-intro">YominGo is built by one developer (me!) and actively growing. Here's what works
+                today and what's coming soon.</p>
+
+            <div class="roadmap-grid">
+                <div class="roadmap-column live">
+                    <h3>✓ Live Now</h3>
+                    <ul class="roadmap-list">
+                        <li>Real Japanese News articles</li>
+                        <li>FSRS spaces repetition flashcards and AI powered Smart-cards!</li>
+                        <li>AI-powered writing exercises with detailed feedback</li>
+                        <li>Dictionary (beta) for instance word lookup</li>
+                        <li>Custom collections create using wide range of tags (JLPT, Common,Tech..etc)</li>
+                        <li>Multi-language support (english,chinese,korean and vietnamese)</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-column soon">
+                    <h3>🚧 Coming Soon</h3>
+                    <ul class="roadmap-list">
+                        <li>Offline mode for studying anywhere</li>
+                        <li>Custom user created article creation (from text and scanning images)</li>
+                        <li>Grammer practice</li>
+                        <li>Listening practice</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support" id="support">
+        <div class="container">
+            <h2>☕ Support Development</h2>
+            <p>YominGo is built by one person in their spare time. If it's helping you learn Japanese,<br>consider
+                buying me a coffee—it helps cover server costs and keeps new features coming!</p>
+            <a href="https://buymeacoffee.com/yomingo" target="_blank"
+                style="display: inline-block; transition: transform 0.3s; box-shadow: 0 15px 40px rgba(2, 136, 209, 0.3); border-radius: 12px; height: 50px;"
+                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 20px 50px rgba(2, 136, 209, 0.4)';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px rgba(2, 136, 209, 0.3)';">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+                    style="height: 50px !important; width: auto !important; border-radius: 12px;">
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Built with ❤️ for Japanese learners | <a href="mailto:your-email@example.com">Contact</a> | <a
+                    href="#">Privacy Policy</a></p>
+            <p style="margin-top: 10px; font-size: 14px;">© 2025 YominGo. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
