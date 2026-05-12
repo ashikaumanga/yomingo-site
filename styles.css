@@ -8,11 +8,11 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #2c3e50;
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
             overflow-x: hidden;
         }
         
-        /* Clean Background - replaced generic animated shapes with authentic design */
+        /* Modern Glassmorphism Background */
         body::before {
             content: '';
             position: fixed;
@@ -20,10 +20,31 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 15% 50%, rgba(0, 100, 100, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 85% 30%, rgba(200, 50, 50, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 50% 80%, rgba(50, 100, 50, 0.03) 0%, transparent 50%);
+            background:
+                radial-gradient(circle at 15% 50%, rgba(200, 16, 46, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(200, 16, 46, 0.05) 0%, transparent 35%),
+                radial-gradient(circle at 50% 80%, rgba(44, 62, 80, 0.05) 0%, transparent 40%);
             z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Floating orbs for modern effect */
+        body::after {
+            content: '';
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(200, 16, 46, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+            z-index: -1;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 30px) scale(1.1); }
         }
         
         .container {
@@ -34,15 +55,17 @@
             z-index: 1;
         }
         
-        /* Header - clean, professional design */
+        /* Header - Modern Glassmorphism */
         header {
             padding: 20px 0;
-            background: #fff;
-            border-bottom: 1px solid #e9ecef;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(200, 16, 46, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
         }
         
         .header-content {
@@ -91,9 +114,14 @@
         .hamburger-line {
             width: 100%;
             height: 2px;
-            background: #2c3e50;
+            background: linear-gradient(90deg, #2c3e50, #c8102e);
             transition: all 0.3s ease;
             transform-origin: center;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-btn:hover .hamburger-line {
+            background: linear-gradient(90deg, #c8102e, #e74c3c);
         }
 
         /* Mobile menu button active state (X animation) */
@@ -113,17 +141,53 @@
             text-decoration: none;
             color: #495057;
             font-weight: 500;
-            transition: color 0.2s;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #c8102e, #e74c3c);
+            transition: width 0.3s ease;
         }
 
         .nav-links a:hover {
             color: #c8102e;
         }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
         
-        /* Hero Section - clean, focused design */
+        /* Hero Section - Modern Glassmorphism */
         .hero {
             padding: 80px 0 60px;
             text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(200, 16, 46, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
         }
 
         .hero h1 {
@@ -136,8 +200,30 @@
         }
 
         .hero .highlight {
-            color: #c8102e;
+            background: linear-gradient(135deg, #c8102e 0%, #e74c3c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero .highlight::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #c8102e, #e74c3c, #c8102e);
+            border-radius: 2px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .hero:hover .highlight::before {
+            transform: scaleX(1);
         }
 
         .hero p {
@@ -162,30 +248,58 @@
             height: 55px;
             cursor: pointer;
             opacity: 0.9;
-            transition: opacity 0.2s;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+            position: relative;
+        }
+
+        .store-badge::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(200, 16, 46, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .store-badge:hover {
             opacity: 1;
+            transform: translateY(-4px);
+            filter: drop-shadow(0 8px 20px rgba(200, 16, 46, 0.2));
+        }
+
+        .store-badge:hover::before {
+            opacity: 1;
         }
         
-        /* Clean Card Style */
+        /* Modern Glass Card Style */
         .glass-card {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
             padding: 40px;
-            transition: border-color 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
         }
 
         .glass-card:hover {
-            border-color: #c8102e;
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(200, 16, 46, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(200, 16, 46, 0.15);
         }
 
-        /* Problem Section */
+        /* Problem Section - Modern Glassmorphism */
         .problem-section {
             padding: 60px 0;
-            background: #fff;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.7) 100%);
+            backdrop-filter: blur(10px);
         }
 
         .problem-section h2 {
@@ -203,23 +317,50 @@
         }
 
         .problem-card {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
             padding: 32px;
-            transition: all 0.2s;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #c8102e, #e74c3c, #c8102e);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .problem-card:hover {
-            border-color: #c8102e;
-            box-shadow: 0 4px 12px rgba(200, 16, 46, 0.1);
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(200, 16, 46, 0.3);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(200, 16, 46, 0.2);
+        }
+
+        .problem-card:hover::before {
+            opacity: 1;
         }
 
         .problem-card .icon {
             font-size: 32px;
             margin-bottom: 16px;
             display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover .icon {
+            transform: scale(1.2) rotate(5deg);
         }
         
         .problem-card h3 {
@@ -235,10 +376,10 @@
             font-size: 16px;
         }
         
-        /* Features Section - clean, professional design */
+        /* Features Section - Modern Glassmorphism */
         .features {
             padding: 60px 0;
-            background: #f8f9fa;
+            background: linear-gradient(180deg, rgba(248, 249, 250, 0.6) 0%, rgba(255, 255, 255, 0.4) 100%);
         }
 
         .features h2 {
@@ -255,10 +396,21 @@
             gap: 60px;
             margin-bottom: 60px;
             align-items: center;
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px;
             padding: 40px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(200, 16, 46, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(200, 16, 46, 0.15);
         }
 
         .feature-item:nth-child(even) .feature-content {
@@ -284,9 +436,9 @@
         }
 
         .feature-visual {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, rgba(200, 16, 46, 0.05) 0%, rgba(200, 16, 46, 0.1) 100%);
             height: 350px;
-            border-radius: 8px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -294,13 +446,38 @@
             font-size: 16px;
             text-align: center;
             padding: 24px;
-            border: 2px dashed #dee2e6;
+            border: 1px solid rgba(200, 16, 46, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-visual::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 40%,
+                rgba(255, 255, 255, 0.3) 50%,
+                transparent 60%
+            );
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
         }
         
-        /* How It Works - clean, focused design */
+        /* How It Works - Modern Glassmorphism */
         .how-it-works {
             padding: 60px 0;
-            background: #fff;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(248, 249, 250, 0.5) 100%);
         }
 
         .how-it-works h2 {
@@ -320,28 +497,71 @@
         .step {
             text-align: center;
             padding: 32px;
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            transition: border-color 0.2s;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(200, 16, 46, 0.02) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .step:hover {
-            border-color: #c8102e;
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(200, 16, 46, 0.3);
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 16px 48px rgba(200, 16, 46, 0.15);
+        }
+
+        .step:hover::before {
+            opacity: 1;
         }
 
         .step-number {
             width: 48px;
             height: 48px;
-            background: #c8102e;
+            background: linear-gradient(135deg, #c8102e 0%, #e74c3c 100%);
             color: #fff;
-            border-radius: 8px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             font-weight: 700;
             margin: 0 auto 16px;
+            box-shadow: 0 4px 15px rgba(200, 16, 46, 0.4);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .step-number::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            height: 50%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+            border-radius: 10px 10px 50% 50%;
+        }
+
+        .step:hover .step-number {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 25px rgba(200, 16, 46, 0.5);
         }
 
         .step h3 {
@@ -357,10 +577,10 @@
             font-size: 15px;
         }
         
-        /* Roadmap - clean, organized design */
+        /* Roadmap - Modern Glassmorphism */
         .roadmap {
             padding: 60px 0;
-            background: #f8f9fa;
+            background: linear-gradient(180deg, rgba(248, 249, 250, 0.6) 0%, rgba(255, 255, 255, 0.4) 100%);
         }
 
         .roadmap h2 {
@@ -386,15 +606,21 @@
         }
 
         .roadmap-column {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
             padding: 32px;
-            transition: border-color 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
         }
 
         .roadmap-column:hover {
-            border-color: #c8102e;
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(200, 16, 46, 0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(200, 16, 46, 0.15);
         }
 
         .roadmap-column h3 {
@@ -439,14 +665,35 @@
             color: #6c757d;
         }
         
-        /* Support Section - clean, sincere design */
+        /* Support Section - Modern Glassmorphism */
         .support {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
             padding: 50px 40px;
             text-align: center;
             margin: 60px 0;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #c8102e, #e74c3c, #c8102e);
+        }
+
+        .support:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 50px rgba(200, 16, 46, 0.15);
         }
 
         .support h2 {
@@ -463,11 +710,25 @@
             line-height: 1.6;
         }
         
-        /* Footer - clean, professional design */
+        /* Footer - Modern Glassmorphism */
         footer {
-            background: #2c3e50;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 73, 94, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             padding: 40px 0;
             text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 16, 46, 0.3), transparent);
         }
 
         footer p {
@@ -479,11 +740,27 @@
         footer a {
             color: #fff;
             text-decoration: none;
-            transition: color 0.2s;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        footer a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #c8102e;
+            transition: width 0.3s ease;
         }
 
         footer a:hover {
-            color: #f8f9fa;
+            color: #c8102e;
+        }
+
+        footer a:hover::after {
+            width: 100%;
         }
         
         /* Responsive - clean mobile experience */
@@ -519,7 +796,9 @@
                 left: 0;
                 width: 100%;
                 height: 100vh;
-                background: rgba(255, 255, 255, 0.98);
+                background: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
