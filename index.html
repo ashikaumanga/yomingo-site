@@ -9,19 +9,11 @@
 </head>
 
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-    </div>
-    <div class="grid-overlay"></div>
-
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">YominGo</div>
+                <div class="logo"><img src="assets/yomingo.png" alt="YominGo" class="logo-icon">YominGo</div>
                 <ul class="nav-links" style="align-items: center;">
                     <li><a href="#features" data-i18n="nav_features">Features</a></li>
                     <li><a href="#how" data-i18n="nav_how">How It Works</a></li>
@@ -73,12 +65,12 @@
                     </p>
                 </div>
                 <div class="problem-card">
-                    <div class="icon">🧠</div>
+                    <div class="icon">⏰</div>
                     <h3 data-i18n="prob_retention_title">Poor Retention</h3>
                     <p data-i18n="prob_retention_desc">Without spaced repetition, you forget words as fast as you learn them.</p>
                 </div>
                 <div class="problem-card">
-                    <div class="icon">✍️</div>
+                    <div class="icon">🎯</div>
                     <h3 data-i18n="prob_practice_title">No Production Practice</h3>
                     <p data-i18n="prob_practice_desc">Recognizing words is easy. Using them correctly in sentences? That's the real challenge.</p>
                 </div>
@@ -93,7 +85,7 @@
 
             <div class="feature-item">
                 <div class="feature-content">
-                    <h3 data-i18n="feat_read_title">📰 Read Real Japanese</h3>
+                    <h3 data-i18n="feat_read_title">Read Real Japanese</h3>
                     <p data-i18n="feat_read_p1">Browse authentic news articles written for native speakers. Tap any word for instant dictionary
                         lookup with furigana reading guides.</p>
                     <p data-i18n="feat_read_p2">Our advanced <strong>Compound Word Breakdown</strong> technology analyzes complex Japanese terms,
@@ -110,7 +102,7 @@
 
             <div class="feature-item">
                 <div class="feature-content">
-                    <h3 data-i18n="feat_dict_title">🔍 Standalone Dictionary & Organization</h3>
+                    <h3 data-i18n="feat_dict_title">Standalone Dictionary & Organization</h3>
                     <p data-i18n="feat_dict_p1">Not just a reader—YominGo features a professional-grade standalone Japanese dictionary with
                         Romaji support and intelligent multi-factor ranking.</p>
                     <p data-i18n="feat_dict_p2">Build <strong>User-Created Collections</strong> to neatly organize your vocabulary, and
@@ -124,7 +116,7 @@
 
             <div class="feature-item">
                 <div class="feature-content">
-                    <h3 data-i18n="feat_flash_title">🎴 Smart Flashcards</h3>
+                    <h3 data-i18n="feat_flash_title">Smart Flashcards</h3>
                     <p data-i18n="feat_flash_p1">Powered by the FSRS algorithm (the science behind Anki), cards appear exactly when you're about
                         to forget them.</p>
                     <p data-i18n="feat_flash_p2">Experience <strong>Sense-Aware Flashcards</strong>: reviews and exercises are tied to the
@@ -139,7 +131,7 @@
 
             <div class="feature-item">
                 <div class="feature-content">
-                    <h3 data-i18n="feat_ai_title">🤖 AI Writing Tutor</h3>
+                    <h3 data-i18n="feat_ai_title">AI Writing Tutor</h3>
                     <p data-i18n="feat_ai_p1">The real magic: Write Japanese sentences using your vocabulary, get detailed AI feedback on what
                         you did right and what to improve.</p>
                     <p data-i18n="feat_ai_p2">Not just "correct" or "wrong"—get scored feedback on grammar, word choice, and natural usage.
@@ -219,15 +211,15 @@
     <!-- Support Section -->
     <section class="support" id="support">
         <div class="container">
-            <h2 data-i18n="support_title">☕ Support Development</h2>
+            <h2 data-i18n="support_title">Support Development</h2>
             <p data-i18n="support_desc">YominGo is built by one person in their spare time. If it's helping you learn Japanese,<br>consider
                 buying me a coffee—it helps cover server costs and keeps new features coming!</p>
             <a href="https://buymeacoffee.com/yomingo" target="_blank"
-                style="display: inline-block; transition: transform 0.3s; box-shadow: 0 15px 40px rgba(2, 136, 209, 0.3); border-radius: 12px; height: 50px;"
-                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 20px 50px rgba(2, 136, 209, 0.4)';"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px rgba(2, 136, 209, 0.3)';">
+                style="display: inline-block; opacity: 0.9; transition: opacity 0.2s;"
+                onmouseover="this.style.opacity='1';"
+                onmouseout="this.style.opacity='0.9';">
                 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
-                    style="height: 50px !important; width: auto !important; border-radius: 12px;">
+                    style="height: 50px !important; width: auto !important;">
             </a>
         </div>
     </section>
@@ -235,9 +227,9 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p><span data-i18n="footer_built">Built with ❤️ for Japanese learners</span> | <a href="mailto:your-email@example.com" data-i18n="footer_contact">Contact</a> | <a
+            <p><span data-i18n="footer_built">Built for Japanese learners</span> | <a href="mailto:your-email@example.com" data-i18n="footer_contact">Contact</a> | <a
                     href="#" data-i18n="footer_privacy">Privacy Policy</a></p>
-            <p style="margin-top: 10px; font-size: 14px;">© 2026 YominGo. All rights reserved.</p>
+            <p style="margin-top: 8px; font-size: 14px;">© 2026 YominGo. All rights reserved.</p>
         </div>
     </footer>
     
