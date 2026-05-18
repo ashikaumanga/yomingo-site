@@ -1,5 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for anchor links
+    // Play feature videos only when scrolled into view; pause when out
+    const featureVideos = document.querySelectorAll('.feature-video video');
+    if (featureVideos.length && 'IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                if (entry.isIntersecting) {
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(() => { /* autoplay may be blocked; ignore */ });
+                    }
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.35 });
+
+        featureVideos.forEach(video => videoObserver.observe(video));
+    } else {
+        // Fallback: just play them
+        featureVideos.forEach(video => { video.play().catch(() => {}); });
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();

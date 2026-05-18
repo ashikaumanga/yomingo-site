@@ -523,6 +523,52 @@
             0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
             100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
         }
+
+        /* Feature videos — 720x1614 portrait phone mockups */
+        .feature-visual.feature-video {
+            background: none;
+            border: none;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            padding: 0;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+        }
+
+        .feature-visual.feature-video::before {
+            display: none;
+        }
+
+        .feature-visual.feature-video video {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 620px;
+            aspect-ratio: 720 / 1614;
+            object-fit: contain;
+            border-radius: 28px;
+            background: #000;
+            display: block;
+        }
+
+        .feature-visual.feature-video.read video {
+            box-shadow: 0 20px 60px rgba(129, 212, 250, 0.35);
+        }
+
+        .feature-visual.feature-video.smart video {
+            box-shadow: 0 20px 60px rgba(200, 16, 46, 0.4);
+        }
+
+        .feature-visual.feature-video.dict video {
+            box-shadow: 0 20px 60px rgba(0, 172, 193, 0.35);
+        }
+
+        .feature-visual.feature-video.coll video {
+            box-shadow: 0 20px 60px rgba(238, 90, 90, 0.35);
+        }
         
         /* How It Works - Modern Glassmorphism */
         .how-it-works {
@@ -714,7 +760,14 @@
             content: "→";
             color: #6c757d;
         }
-        
+
+        .dict-note {
+            font-size: 0.78em;
+            color: #6c757d;
+            font-weight: 400;
+            margin-left: 4px;
+        }
+
         /* Support Section - Modern Glassmorphism */
         .support {
             background: rgba(255, 255, 255, 0.75);
@@ -832,6 +885,11 @@
             .feature-item:nth-child(even) .feature-content,
             .feature-item:nth-child(even) .feature-visual {
                 order: 0;
+            }
+
+            .feature-visual.feature-video video {
+                max-height: 70vh;
+                max-width: 280px;
             }
 
             /* Mobile Menu Styles */
