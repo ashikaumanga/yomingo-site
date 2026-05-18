@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — YominGo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .legal {
+            padding: 60px 20px 80px;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .legal h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        .legal .effective {
+            color: #6c757d;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        .legal h2 {
+            font-size: 22px;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        .legal p, .legal li {
+            color: #495057;
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .legal ul {
+            padding-left: 22px;
+            margin-bottom: 16px;
+        }
+        .legal a {
+            color: #c8102e;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(200, 16, 46, 0.3);
+            transition: border-color 0.2s ease;
+        }
+        .legal a:hover {
+            border-bottom-color: #c8102e;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="assets/yomingo.png" alt="YominGo" class="logo-icon">YominGo
+                </a>
+                <ul class="nav-links" style="align-items: center;">
+                    <li><a href="index.html">← Back to Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="legal">
+        <h1>Privacy Policy</h1>
+        <p class="effective">Effective date: May 18, 2026</p>
+
+        <p>This Privacy Policy describes how the YominGo mobile application ("YominGo", "we", "our") handles information when you use the app. We aim to collect as little personal information as possible and to be transparent about the third parties involved when you use the app.</p>
+
+        <h2>1. Information we handle</h2>
+        <p>YominGo does <strong>not</strong> directly collect or store personal information such as your email address. Account and sign-in flows are handled by Google Firebase. Specifically:</p>
+        <ul>
+            <li><strong>Account &amp; sign-in:</strong> Authentication and email handling are managed by <strong>Google Firebase Authentication</strong>. YominGo does not store or process your email address itself.</li>
+            <li><strong>Learning content:</strong> Words you save, your Collections, and sentences you write during Smart Card practice are associated with a Firebase user identifier and stored to power your learning progress.</li>
+            <li><strong>Writing submitted to AI grading:</strong> When you submit a sentence for Smart Card evaluation, the sentence is sent to <strong>Google's Gemini models</strong> for grading. No other personal information is sent with it.</li>
+            <li><strong>Analytics &amp; crash reporting:</strong> The app uses standard <strong>Flutter</strong> instrumentation and <strong>Google Play Console</strong> analytics for crash reports, app vitals, and anonymized usage statistics. These do not include the content you write or the words you save.</li>
+        </ul>
+
+        <h2>2. How we use information</h2>
+        <ul>
+            <li>To let you sign in and synchronize your learning progress across devices.</li>
+            <li>To grade written sentences you submit and return feedback to you.</li>
+            <li>To diagnose crashes and improve the app's stability and performance.</li>
+        </ul>
+        <p>We do not sell your data. We do not use your written content to train our own models.</p>
+
+        <h2>3. Where your data is stored</h2>
+        <p>Your learning content is stored on Google Cloud Platform in the <strong>asia-northeast1 (Tokyo, Japan)</strong> region. If you use YominGo from outside Japan, your data may be transferred to and processed in Japan. Japan has been recognized as providing an adequate level of data protection under the EU GDPR adequacy decision.</p>
+
+        <h2>4. Third-party services</h2>
+        <p>By using YominGo, your data may be processed by the following providers, each governed by their own privacy policies:</p>
+        <ul>
+            <li>Google Firebase (authentication, data storage) — <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security</a></li>
+            <li>Google Cloud Platform (storage in Tokyo region) — <a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">GCP Privacy Notice</a></li>
+            <li>Google Gemini (AI grading of written sentences) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+            <li>Google Play Console (analytics, crash reports) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        </ul>
+
+        <h2>5. Data retention and deletion</h2>
+        <p>Your learning content is retained for as long as your account exists. You can request deletion of your account and the data associated with it at any time by emailing <a href="mailto:yomingo.labs@gmail.com">yomingo.labs@gmail.com</a>.</p>
+
+        <h2>6. Your rights</h2>
+        <p>Depending on where you live (for example, under the EU/UK GDPR or California CCPA), you may have rights to access, correct, export, or delete your data, and to object to certain processing. To exercise any of these rights, contact <a href="mailto:yomingo.labs@gmail.com">yomingo.labs@gmail.com</a>.</p>
+
+        <h2>7. Children's privacy</h2>
+        <p>YominGo is not directed at children under 13, and we do not knowingly collect data from children under 13. If you believe a child has provided information through the app, please contact us so we can delete it.</p>
+
+        <h2>8. Donations</h2>
+        <p>If you choose to support YominGo through "Buy Me a Coffee", that transaction is handled entirely by Buy Me a Coffee. YominGo does not receive your payment details. See <a href="https://www.buymeacoffee.com/privacy-policy" target="_blank" rel="noopener">Buy Me a Coffee's privacy policy</a> for details.</p>
+
+        <h2>9. Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. The "Effective date" above will be updated when changes are made. Continued use of YominGo after a change indicates acceptance of the revised policy.</p>
+
+        <h2>10. Contact</h2>
+        <p>Questions or requests related to this Privacy Policy can be sent to <a href="mailto:yomingo.labs@gmail.com">yomingo.labs@gmail.com</a>.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><a href="index.html">Home</a> | <a href="mailto:yomingo.labs@gmail.com">Contact</a></p>
+            <p style="margin-top: 8px; font-size: 14px;">© 2026 YominGo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
