@@ -51,7 +51,7 @@ const translations = {
         live_3: "AI-powered writing exercises with detailed feedback",
         live_4: "Dictionary for instant word lookup — 200k+ words <small class=\"dict-note\">(Korean, Chinese, and Vietnamese translations available for the common 27k words)</small>",
         live_5: "Custom collections create using wide range of tags (JLPT, Common,Tech..etc)",
-        live_6: "Multi-language support (english,chinese,korean and vietnamese)",
+        live_6: "Multi-language support (English, Simplified Chinese, Traditional Chinese, Korean, and Vietnamese)",
         coming_soon_col: "🚧 Coming Soon",
         soon_kanji: "Kanji writing practice — solidify kanji into long-term memory through stroke-order drills",
         soon_1: "Expanded offline support for studying anywhere",
@@ -120,7 +120,7 @@ const translations = {
         live_3: "상세한 피드백이 있는 AI 기반 작문 연습",
         live_4: "즉시 단어 검색을 위한 사전 — 200,000개 이상의 단어 <small class=\"dict-note\">(한국어, 중국어, 베트남어 번역은 일반적인 27,000개 단어에 대해 제공)</small>",
         live_5: "다양한 태그(JLPT, 일반, 기술 등)를 사용한 맞춤형 컬렉션 생성",
-        live_6: "다국어 지원 (영어, 중국어, 한국어, 베트남어)",
+        live_6: "다국어 지원 (영어, 간체 중국어, 번체 중국어, 한국어, 베트남어)",
         coming_soon_col: "🚧 출시 예정",
         soon_kanji: "한자 쓰기 연습 — 획순 드릴로 한자를 장기 기억에 완전히 새기세요",
         soon_1: "어디서나 공부할 수 있도록 오프라인 지원 확대",
@@ -189,7 +189,7 @@ const translations = {
         live_3: "提供详细反馈的 AI 写作练习",
         live_4: "用于即时查词的词典 —— 20万+ 单词 <small class=\"dict-note\">（韩语、中文、越南语翻译仅适用于常用的 2.7万 单词）</small>",
         live_5: "使用各种标签（JLPT，常用，技术等）创建的自定义集合",
-        live_6: "多语言支持（英语、中文、韩语和越南语）",
+        live_6: "多语言支持（英语、简体中文、繁体中文、韩语和越南语）",
         coming_soon_col: "🚧 即将推出",
         soon_kanji: "汉字书写练习 — 通过笔顺练习将汉字深刻印入长期记忆",
         soon_1: "扩展离线支持，随时随地学习",
@@ -205,6 +205,75 @@ const translations = {
         footer_built: "用心为日语学习者打造 ❤️",
         footer_contact: "联系我们",
         footer_privacy: "隐私政策"
+    },
+    "zh-TW": {
+        nav_features: "功能",
+        nav_how: "使用說明",
+        nav_roadmap: "路線圖",
+        nav_support: "支援",
+        hero_title: "透過真實語境與 AI 練習<br><span class=\"highlight\">學習日語</span>",
+        hero_subtitle: "閱讀真實的新聞文章，透過抽認卡累積詞彙，並透過 AI 即時反饋的寫作練習，真正提升你的日語能力。",
+        coming_soon: "即將推出",
+        problem_title: "為什麼大多數單字應用沒有效果",
+        prob_context_title: "缺乏語境",
+        prob_context_desc: "只從教科書例句中孤立地學習單字，無法了解日語在現實中的實際用法。",
+        prob_retention_title: "記憶留存率低",
+        prob_retention_desc: "若沒有間隔重複，背過的單字很快就會被遺忘。",
+        prob_practice_title: "缺乏輸出練習",
+        prob_practice_desc: "認識單字很容易，但如何在句子中正確使用？這才是真正的挑戰。",
+        journey_title: "全方位學習旅程",
+        feat_read_title: "📰 閱讀真實日語",
+        feat_read_p1: "瀏覽為母語者撰寫的真實新聞文章。點擊任何單字即可即時查詢詞典，並顯示假名標音。",
+        feat_read_p2: "我們先進的<strong>複合詞拆解</strong>技術可分析複雜的日語詞彙，將其拆分為易於理解的子成分。",
+        feat_read_p3: "只需點擊一下，即可將單字儲存到個人牌組以供日後練習。在實際使用的語境中學習詞彙。",
+        feat_dict_title: "🔍 獨立詞典",
+        feat_dict_p1: "不僅僅是閱讀器——YominGo 配備了專業級的獨立日語詞典，支援羅馬拼音，並具備智慧多因素排名。",
+        feat_dict_p2: "在其他應用程式中選取文字即可立即開啟 YominGo 詞典。非常適合在 Chrome 或其他瀏覽器中閱讀文章——無需離開工作流程即可輕鬆將單字加入收藏。",
+        feat_dict_img: "專業級<br>詞典",
+        feat_coll_title: "📁 收藏式整理",
+        feat_coll_p1: "在閱讀文章時儲存單字，自然地建立<strong>使用者自訂收藏</strong>——每次點擊都會將詞彙連同出現的語境一起加入。",
+        feat_coll_p2: "或使用 JLPT、常用、技術等現有標籤從詞典中即時預填一個收藏。",
+        feat_coll_img: "按需<br>整理",
+        smart_title: "🎴 YominGo 智慧卡™",
+        smart_tagline: "讓我們與其他所有應用程式與眾不同的核心功能。",
+        smart_intro: "智慧卡將 FSRS 間隔重複（與 Anki 背後相同的演算法）與 AI 評分寫作練習結合在單一複習流程中：",
+        smart_step1: "FSRS 排程（決定何時複習）",
+        smart_step2: "您使用目標單字輸入句子",
+        smart_step3: "AI 評估：正確的單字使用 + 文法 + 自然流暢度",
+        smart_step4: "詳細的反饋與評分",
+        how_title: "使用方法",
+        step1_title: "閱讀與收集",
+        step1_desc: "瀏覽文章，點擊不認識的單字，將其加入牌組",
+        step2_title: "每日複習",
+        step2_desc: "抽認卡會根據間隔重複出現——在您快要忘記時進行複習",
+        step3_title: "寫作練習",
+        step3_desc: "在句子中使用詞彙，獲得 AI 反饋，提升您的日語水準",
+        step4_title: "追蹤進度",
+        step4_desc: "看著您的詞彙量增加，記憶力隨時間提升",
+        road_title: "現在與未來",
+        road_subtitle: "YominGo 由一位開發者（就是我！）在業餘時間建立並積極成長中。以下是現有功能和即將推出的功能。",
+        live_now: "✓ 現有功能",
+        live_1: "真實的日語新聞文章",
+        live_2: "FSRS 間隔重複抽認卡與 AI 智慧卡！",
+        live_3: "提供詳細反饋的 AI 寫作練習",
+        live_4: "用於即時查詞的詞典 —— 20萬+ 單字 <small class=\"dict-note\">（韓語、中文、越南語翻譯僅適用於常用的 2.7萬 單字）</small>",
+        live_5: "使用各種標籤（JLPT、常用、技術等）建立的自訂收藏",
+        live_6: "多語言支援（英語、簡體中文、繁體中文、韓語和越南語）",
+        coming_soon_col: "🚧 即將推出",
+        soon_kanji: "漢字書寫練習 — 透過筆順練習將漢字深刻印入長期記憶",
+        soon_1: "擴展離線支援，隨時隨地學習",
+        soon_2: "使用者自訂文章建立（從文字和掃描圖像中）",
+        soon_3: "文法練習",
+        soon_4: "聽力練習",
+        soon_dict_title: "詞典",
+        soon_dict_1: "動詞變化與詞形變化",
+        soon_dict_2: "支援 4 種語言的完整詞典",
+        soon_dict_3: "漢字（含部首及相似漢字連結）",
+        support_title: "☕ 支持開發",
+        support_desc: "YominGo 是由一個人在業餘時間建立的。如果它對您學習日語有幫助，<br>請考慮請我喝杯咖啡——這有助於支付伺服器費用並持續推出新功能！",
+        footer_built: "用心為日語學習者打造 ❤️",
+        footer_contact: "聯絡我們",
+        footer_privacy: "隱私政策"
     },
     vi: {
         nav_features: "Tính năng",
@@ -258,7 +327,7 @@ const translations = {
         live_3: "Bài tập viết do AI hỗ trợ với phản hồi chi tiết",
         live_4: "Từ điển tra cứu từ tức thì — 200k+ từ <small class=\"dict-note\">(Bản dịch tiếng Hàn, tiếng Trung và tiếng Việt có sẵn cho 27k từ thông dụng)</small>",
         live_5: "Bộ sưu tập tùy chỉnh tạo bằng cách sử dụng nhiều thẻ (JLPT, Thông dụng, Công nghệ..v.v.)",
-        live_6: "Hỗ trợ đa ngôn ngữ (tiếng Anh, tiếng Trung, tiếng Hàn và tiếng Việt)",
+        live_6: "Hỗ trợ đa ngôn ngữ (tiếng Anh, tiếng Trung giản thể, tiếng Trung phồn thể, tiếng Hàn và tiếng Việt)",
         coming_soon_col: "🚧 Sắp Ra Mắt",
         soon_kanji: "Luyện viết Kanji — củng cố Kanji vào trí nhớ dài hạn qua luyện tập nét chữ",
         soon_1: "Mở rộng hỗ trợ ngoại tuyến để học mọi lúc mọi nơi",
@@ -288,11 +357,12 @@ function changeLanguage(lang) {
     document.documentElement.lang = lang;
 }
 
-// Ensure elements get properly updated on initial load if needed
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if browser has a preferred language that matches
-    const browserLang = navigator.language.split('-')[0];
-    if (translations[browserLang]) {
-        changeLanguage(browserLang);
+    const full = navigator.language;
+    const short = full.split('-')[0];
+    if (full === 'zh-TW' || full === 'zh-Hant' || full === 'zh-HK') {
+        changeLanguage('zh-TW');
+    } else if (translations[short]) {
+        changeLanguage(short);
     }
 });
