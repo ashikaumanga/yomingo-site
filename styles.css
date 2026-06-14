@@ -275,7 +275,16 @@
         .store-badge:hover::before {
             opacity: 1;
         }
-        
+
+        .hero-trust {
+            margin-top: 16px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: rgba(255, 255, 255, 0.65);
+            text-transform: uppercase;
+        }
+
         /* Modern Glass Card Style */
         .glass-card {
             background: rgba(255, 255, 255, 0.7);
