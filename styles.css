@@ -652,6 +652,77 @@
             line-height: 1;
         }
         
+        /* Extra Features - Horizontal Video Cards */
+        .extra-features {
+            padding: 40px 0 60px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(248, 249, 250, 0.5) 100%);
+        }
+
+        .extra-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .extra-feature-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+        }
+
+        .extra-feature-card:hover {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(200, 16, 46, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(200, 16, 46, 0.15);
+        }
+
+        .extra-feature-card h3 {
+            font-size: 22px;
+            margin: 20px 0 12px;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .extra-feature-card p {
+            color: #495057;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .extra-feature-video {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .extra-feature-video video {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 380px;
+            aspect-ratio: 720 / 1430;
+            object-fit: cover;
+            object-position: center 45%;
+            border-radius: 28px;
+            background: #000;
+            display: block;
+        }
+
+        .extra-feature-video.browser video {
+            box-shadow: 0 20px 60px rgba(45, 106, 159, 0.35);
+        }
+
+        .extra-feature-video.flashcard video {
+            box-shadow: 0 20px 60px rgba(156, 39, 176, 0.35);
+        }
+
         /* Roadmap - Modern Glassmorphism */
         .roadmap {
             padding: 60px 0;
@@ -972,8 +1043,16 @@
 
             .problem-section h2,
             .features h2,
-            .how-it-works h2,
             .roadmap h2 {
                 font-size: 28px;
+            }
+
+            .extra-features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .extra-feature-video video {
+                max-height: 70vh;
+                max-width: 280px;
             }
         }

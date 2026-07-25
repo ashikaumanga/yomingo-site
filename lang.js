@@ -68,7 +68,11 @@ const translations = {
         support_desc: "YominGo is built by one person in their spare time. If it's helping you learn Japanese,<br>consider buying me a coffee—it helps cover server costs and keeps new features coming!",
         footer_built: "Built with ❤️ for Japanese learners",
         footer_contact: "Contact",
-        footer_privacy: "Privacy Policy"
+        footer_privacy: "Privacy Policy",
+        extra_browser_title: "📱 Look Up Anywhere",
+        extra_browser_desc: "Select text in any app — browsers, messaging, social media — and instantly open YominGo Dictionary to look up and save words on the spot.",
+        extra_flashcard_title: "🔄 Traditional Flashcards",
+        extra_flashcard_desc: "Classic spaced repetition review powered by the FSRS algorithm. Quick, focused vocabulary drilling for daily practice."
     },
     ko: {
         nav_features: "기능",
@@ -139,7 +143,11 @@ const translations = {
         support_desc: "YominGo는 여가 시간에 한 사람이 만들었습니다. 일본어 학습에 도움이 된다면<br>커피 한 잔을 사주세요—서버 비용을 충당하고 새로운 기능을 추가하는 데 큰 도움이 됩니다!",
         footer_built: "일본어 학습자를 위해 ❤️로 만들었습니다",
         footer_contact: "문의하기",
-        footer_privacy: "개인정보 보호정책"
+        footer_privacy: "개인정보 보호정책",
+        extra_browser_title: "📱 어디서든 검색",
+        extra_browser_desc: "브라우저, 메신저, SNS 등 어떤 앱에서든 텍스트를 선택하면 즉시 YominGo 사전으로 단어를 검색하고 저장할 수 있습니다.",
+        extra_flashcard_title: "🔄 기존 플래시카드",
+        extra_flashcard_desc: "FSRS 알고리즘 기반의 클래식 간격 반복 복습. 빠르고 집중적인 매일 어휘 훈련."
     },
     zh: {
         nav_features: "功能",
@@ -210,7 +218,11 @@ const translations = {
         support_desc: "YominGo 是由一个人在业余时间建立的。如果它对您学习日语有帮助，<br>请考虑请我喝杯咖啡——这有助于支付服务器成本并不断推出新功能！",
         footer_built: "用心为日语学习者打造 ❤️",
         footer_contact: "联系我们",
-        footer_privacy: "隐私政策"
+        footer_privacy: "隐私政策",
+        extra_browser_title: "📱 随时随地查词",
+        extra_browser_desc: "在任何应用中选择文本——浏览器、聊天、社交媒体——即可立即打开 YominGo 词典查词并保存。",
+        extra_flashcard_title: "🔄 传统抽认卡",
+        extra_flashcard_desc: "基于 FSRS 算法的经典间隔重复复习。快速、专注的每日词汇训练。"
     },
     "zh-TW": {
         nav_features: "功能",
@@ -281,7 +293,11 @@ const translations = {
         support_desc: "YominGo 是由一個人在業餘時間建立的。如果它對您學習日語有幫助，<br>請考慮請我喝杯咖啡——這有助於支付伺服器費用並持續推出新功能！",
         footer_built: "用心為日語學習者打造 ❤️",
         footer_contact: "聯絡我們",
-        footer_privacy: "隱私政策"
+        footer_privacy: "隱私政策",
+        extra_browser_title: "📱 隨時隨地查詞",
+        extra_browser_desc: "在任何應用程式中選取文字——瀏覽器、聊天、社群媒體——即可立即開啟 YominGo 詞典查詞並儲存。",
+        extra_flashcard_title: "🔄 傳統抽認卡",
+        extra_flashcard_desc: "基於 FSRS 演算法的經典間隔重複複習。快速、專注的每日詞彙訓練。"
     },
     vi: {
         nav_features: "Tính năng",
@@ -352,7 +368,11 @@ const translations = {
         support_desc: "YominGo được xây dựng bởi một người trong thời gian rảnh rỗi của họ. Nếu nó giúp bạn học tiếng Nhật,<br>hãy cân nhắc mua cho tôi một ly cà phê—nó giúp trang trải chi phí máy chủ và giữ cho các tính năng mới luôn ra mắt!",
         footer_built: "Được xây dựng với ❤️ dành cho người học tiếng Nhật",
         footer_contact: "Liên hệ",
-        footer_privacy: "Chính sách bảo mật"
+        footer_privacy: "Chính sách bảo mật",
+        extra_browser_title: "📱 Tra Từ Mọi Nơi",
+        extra_browser_desc: "Chọn văn bản trong bất kỳ ứng dụng nào — trình duyệt, nhắn tin, mạng xã hội — và mở ngay từ điển YominGo để tra cứu và lưu từ.",
+        extra_flashcard_title: "🔄 Thẻ Flashcard Truyền Thống",
+        extra_flashcard_desc: "Ôn tập lặp lại ngắt quãng cổ điển với thuật toán FSRS. Luyện từ vựng nhanh chóng, tập trung mỗi ngày."
     }
 };
 
