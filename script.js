@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for anchor links
     // Play feature videos only when scrolled into view; pause when out
     const featureVideos = document.querySelectorAll('.feature-video video');
     if (featureVideos.length && 'IntersectionObserver' in window) {
@@ -23,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         featureVideos.forEach(video => { video.play().catch(() => {}); });
     }
 
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close mobile menu after clicking a link
             const navLinks = document.querySelector('.nav-links');
             const menuBtn = document.querySelector('.mobile-menu-btn');
-            if (navLinks.classList.contains('active')) {
+            if (navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 menuBtn.classList.remove('active');
                 document.body.style.overflow = '';
